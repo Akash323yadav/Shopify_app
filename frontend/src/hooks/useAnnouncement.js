@@ -2,7 +2,8 @@ import { useState, useCallback, useEffect } from 'react';
 import api from '../services/api';
 import axios from 'axios';
 
-const AUTH_URL = '/auth';
+const BACKEND_HOST = import.meta.env.VITE_BACKEND_URL || '';
+const AUTH_URL = `${BACKEND_HOST}/api/auth`;
 
 export const useAnnouncement = (shopName) => {
     const [announcementText, setAnnouncementText] = useState('');

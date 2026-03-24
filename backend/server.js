@@ -14,6 +14,10 @@ const app = express();
 // Render and other hosts use process.env.PORT
 const PORT = process.env.PORT || 5000;
 
+// Trust Cloudflare / Render proxy so Express sees HTTPS correctly
+// Without this, OAuth cookies lose their Secure flag and browsers drop them
+app.set('trust proxy', 1);
+
 // --- Middleware ---
 app.use(express.json());
 app.use(cookieParser());
