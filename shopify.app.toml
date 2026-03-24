@@ -1,7 +1,8 @@
 client_id = "YOUR_CLIENT_ID"
 name = "Announcement App"
 handle = "announcement-app"
-application_url = "https://saturn-trends-sec-locate.trycloudflare.com"
+# UPDATE THIS: Set to your Render URL (e.g. https://shopify-app-xyz.onrender.com)
+application_url = "https://YOUR-APP-NAME.onrender.com"
 embedded = true
 
 [build]
@@ -20,5 +21,6 @@ scopes = "write_products,read_metafields,write_metafields"
 
 [auth]
 redirect_urls = [
-  "https://saturn-trends-sec-locate.trycloudflare.com/auth/callback"
+  # UPDATE THIS: Must match your Render URL + /api/auth/callback
+  "https://YOUR-APP-NAME.onrender.com/api/auth/callback"
 ]
