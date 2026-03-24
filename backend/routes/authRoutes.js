@@ -2,19 +2,20 @@ const express = require('express');
 const router = express.Router();
 const authController = require('../controllers/authController');
 
-// Shopify always redirects to APP_URL/auth?shop=... — forward to actual routes
-router.get('/auth', (req, res) => {
-    const query = new URLSearchParams(req.query).toString();
-    res.redirect(`/api/auth?${query}`);
-});
-router.get('/auth/callback', (req, res) => {
-    const query = new URLSearchParams(req.query).toString();
-    res.redirect(`/api/auth/callback?${query}`);
+// Root entry (Shopify opens here)
+router.get('/', (req, res) => {
+    if (req.query.shop) {
+        const query = new URLSearchParams(req.query).toString();
+        return res.redirect(`/api/auth?${query}`);
+    }
+    res.status(200).send('Shopify API Service is running.');
 });
 
-// Actual OAuth routes
+// Direct OAuth routes (NO EXTRA REDIRECT)
 router.get('/api/auth', authController.beginAuth);
 router.get('/api/auth/callback', authController.authCallback);
+
+// Optional check
 router.get('/api/check-auth', authController.checkAuth);
 
 module.exports = router;

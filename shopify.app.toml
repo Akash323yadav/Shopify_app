@@ -1,26 +1,22 @@
-client_id = "YOUR_CLIENT_ID"
+client_id = "8ae407b750e150c37441496b596fdb0e"
 name = "Announcement App"
 handle = "announcement-app"
-# UPDATE THIS: Set to your Render URL (e.g. https://shopify-app-xyz.onrender.com)
-application_url = "https://YOUR-APP-NAME.onrender.com"
+
+application_url = "https://shopify-api-service.onrender.com"
 embedded = true
 
-[build]
-path = "frontend/dist"
+[auth]
+redirect_urls = [
+  "https://shopify-api-service.onrender.com/api/auth/callback"
+]
 
 [web.backend]
-command = "npm run dev"
+command = "npm start"
 cwd = "backend"
 
 [web.frontend]
-command = "npm run dev"
+command = "npm run build"
 cwd = "frontend"
 
 [access_scopes]
 scopes = "write_products,read_metafields,write_metafields"
-
-[auth]
-redirect_urls = [
-  # UPDATE THIS: Must match your Render URL + /api/auth/callback
-  "https://YOUR-APP-NAME.onrender.com/api/auth/callback"
-]

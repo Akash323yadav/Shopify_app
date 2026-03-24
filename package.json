@@ -5,7 +5,8 @@
     "scripts": {
         "dev": "shopify app dev",
         "deploy": "shopify app deploy",
-        "generate": "shopify app generate"
+        "generate": "shopify app generate",
+        "build": "cd frontend && npm install && npm run build && cd ../backend && npm install"
     },
     "devDependencies": {
         "@shopify/app": "^3.0.0",

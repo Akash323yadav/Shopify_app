@@ -36,6 +36,20 @@ connectDB();
 app.use('/', authRoutes);
 app.use('/', announcementRoutes);
 
+// --- Serve Frontend ---
+const path = require('path');
+// Serve static assets from frontend/dist
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
+
+// Fallback: Serve index.html for any unmatched routes (SPA)
+app.get('*', (req, res) => {
+    // Only serve index.html for non-API routes if you wish, 
+    // but here we serve it for all to ensure the dashboard works on one domain.
+    if (!req.path.startsWith('/api') && !req.path.startsWith('/auth')) {
+        res.sendFile(path.join(__dirname, '../frontend/dist', 'index.html'));
+    }
+});
+
 // --- Server Startup ---
 app.listen(PORT, async () => {
     console.log(`
