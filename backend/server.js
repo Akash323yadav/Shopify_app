@@ -24,8 +24,8 @@ app.use(cors({
 connectDB();
 
 // --- Routes ---
-app.use('/', authRoutes);
-app.use('/', announcementRoutes);
+app.use('/api', authRoutes);
+app.use('/api', announcementRoutes);
 
 // --- Server Startup ---
 app.listen(PORT, async () => {

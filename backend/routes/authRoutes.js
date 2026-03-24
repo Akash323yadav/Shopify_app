@@ -4,6 +4,6 @@ const authController = require('../controllers/authController');
 
 router.get('/auth', authController.beginAuth);
 router.get('/auth/callback', authController.authCallback);
-router.get('/api/check-auth', authController.checkAuth);
+router.get('/check-auth', authController.checkAuth);
 
 module.exports = router;
