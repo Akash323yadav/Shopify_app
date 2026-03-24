@@ -1,0 +1,24 @@
+client_id = "YOUR_CLIENT_ID"
+name = "Announcement App"
+handle = "announcement-app"
+application_url = "https://saturn-trends-sec-locate.trycloudflare.com"
+embedded = true
+
+[build]
+path = "frontend/dist"
+
+[web.backend]
+command = "npm run dev"
+cwd = "backend"
+
+[web.frontend]
+command = "npm run dev"
+cwd = "frontend"
+
+[access_scopes]
+scopes = "write_products,read_metafields,write_metafields"
+
+[auth]
+redirect_urls = [
+  "https://saturn-trends-sec-locate.trycloudflare.com/auth/callback"
+]

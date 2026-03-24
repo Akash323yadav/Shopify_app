@@ -1,0 +1,14 @@
+{
+    "name": "shopify-announcement-app-monorepo",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "shopify app dev",
+        "deploy": "shopify app deploy",
+        "generate": "shopify app generate"
+    },
+    "devDependencies": {
+        "@shopify/app": "^3.0.0",
+        "@shopify/cli": "^3.0.0"
+    }
+}

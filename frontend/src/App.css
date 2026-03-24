@@ -1,0 +1,174 @@
+/* --- 🌟 Premium Global Styles --- */
+:root {
+  --p-color-bg-surface: #f6f6f7;
+  --p-color-bg-surface-secondary: #ffffff;
+  --glass-bg: rgba(255, 255, 255, 0.9);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --accent-gradient: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+  --success-gradient: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+}
+
+body {
+  background-color: #f0f2f5 !important;
+  font-family: 'Inter', -apple-system, sans-serif;
+  min-height: 100vh;
+}
+
+/* --- 💎 Glassmorphism Card Style (Refined) --- */
+.Polaris-Card {
+  border: 1px solid #dfe3e8 !important;
+  background: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.Polaris-Card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* --- 🏗️ Workflow Steps Styling --- */
+.workflow-step {
+  display: flex;
+  gap: 16px;
+  padding: 8px 0;
+}
+
+.step-number {
+  width: 24px;
+  height: 24px;
+  background: var(--accent-gradient);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 11px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(30, 27, 75, 0.2);
+}
+
+/* --- 🖼️ Premium Link Preview --- */
+.preview-container {
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #0f172a;
+  padding: 35px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.preview-label {
+  position: absolute;
+  top: 8px;
+  left: 15px;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* --- ✨ Live Announcement Banner (Dashboard Version) --- */
+.premium-announcement-banner-preview {
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.announcement-glass-content-preview {
+  display: inline-flex;
+  padding: 6px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.announcement-text-preview {
+  color: white;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+}
+
+.announcement-tag-preview {
+  background: var(--success-gradient);
+  color: white;
+  font-size: 9px;
+  font-weight: 900;
+  padding: 2px 8px;
+  border-radius: 8px;
+  margin-right: 12px;
+  text-transform: uppercase;
+}
+
+/* --- 📜 Audit History Table Styling --- */
+.audit-table-wrapper {
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #edeeef;
+  overflow: hidden;
+}
+
+.audit-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.audit-table th {
+  background: #f9fafb;
+  color: #6d7175;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  padding: 10px 15px;
+  text-align: left;
+  border-bottom: 1px solid #edeeef;
+}
+
+.audit-table td {
+  padding: 12px 15px;
+  font-size: 13px;
+  border-bottom: 1px solid #f6f6f7;
+}
+
+.audit-table tr:last-child td {
+  border-bottom: none;
+}
+
+.audit-table td:first-child {
+  font-weight: 500;
+  color: #202223;
+}
+
+.audit-table td:last-child {
+  color: #6d7175;
+  font-size: 12px;
+}
+
+/* --- 🎭 Animations --- */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.Polaris-Page {
+  animation: slideUp 0.5s ease-out;
+}
