@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 const authController = require('../controllers/authController');
 
-router.get('/auth', authController.beginAuth);
-router.get('/auth/callback', authController.authCallback);
-router.get('/check-auth', authController.checkAuth);
+router.get('/api/auth', authController.beginAuth);
+router.get('/api/auth/callback', authController.authCallback);
+router.get('/api/check-auth', authController.checkAuth);
 
 module.exports = router;

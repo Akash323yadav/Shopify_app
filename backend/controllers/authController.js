@@ -8,7 +8,7 @@ exports.beginAuth = async (req, res) => {
     try {
         await shopify.auth.begin({
             shop,
-            callbackPath: '/auth/callback',
+            callbackPath: '/api/auth/callback',
             isOnline: false,
             rawRequest: req,
             rawResponse: res,
