@@ -92,7 +92,7 @@ function App() {
           <Divider />
           <Box paddingBlockStart="600">
             <InlineStack align="center">
-              <Text tone="subtle">Built with ❤️ for the Shopify Developer Challenge (MVC Configurator Mode)</Text>
+              <Text tone="subtle">Built for the Shopify Developer Challenge (MVC Edition)</Text>
             </InlineStack>
           </Box>
         </Box>
